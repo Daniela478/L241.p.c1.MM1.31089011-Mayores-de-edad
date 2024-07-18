@@ -6,20 +6,20 @@
 //*Porcentaje de personas mayor de edad: 58.33%
 
 import CL_mayor from "./CL_mayor.js";
-import Cl_personas from "./CL_personas.js";
+import CL_personas from "./CL_personas.js";
 
-let persona1 = new Cl_personas ("Luis", 15);
-let persona2 = new Cl_personas ("Ana", 19);
-let persona3 = new Cl_personas ("Jose", 21);
-let persona4 = new Cl_personas ("Carmen", 17);
-let persona5 = new Cl_personas ("Rosa", 18);
-let persona6 = new Cl_personas ("José", 22);
-let persona7 = new Cl_personas ("María", 17);
-let persona8 = new Cl_personas ("Luz", 19);
-let persona9 = new Cl_personas ("Rafael", 23);
-let persona10 = new Cl_personas ("Liz", 15);
-let persona11 = new Cl_personas ("Marcos", 20);
-let persona12 = new Cl_personas ("Leo", 16);
+let persona1 = new CL_personas ("Luis", 15);
+let persona2 = new CL_personas ("Ana", 19);
+let persona3 = new CL_personas ("Jose", 21);
+let persona4 = new CL_personas ("Carmen", 17);
+let persona5 = new CL_personas ("Rosa", 18);
+let persona6 = new CL_personas ("José", 22);
+let persona7 = new CL_personas ("María", 17);
+let persona8 = new CL_personas ("Luz", 19);
+let persona9 = new CL_personas ("Rafael", 23);
+let persona10 = new CL_personas ("Liz", 15);
+let persona11 = new CL_personas ("Marcos", 20);
+let persona12 = new CL_personas ("Leo", 16);
 
 let mayor = new CL_mayor();
 
@@ -36,8 +36,9 @@ mayor.procesarPersonas(persona10);
 mayor.procesarPersonas(persona11);
 mayor.procesarPersonas(persona12);
 
-let salida = document.getElementById ("salida");
+let salida = document.getElementById("salida");
 salida.innerHTML = `
-<br>Cantidad de personas: ${mostrarcantpersonas()}
-<br>Cantodad de personas mayor de edad: ${mostrarcantMayor()}
-<br>Porcentaje de personas mayores de edad: ${porcentajeMayores ()}`;
+<br>Cantidad de personas: ${mayor.mostrarcantpersonas()}
+<br>Cantidad de personas mayor de edad: ${mayor.mostrarcantMayor()}
+<br>Porcentaje de personas mayor de edad: ${mayor.porcentajeMayores().toFixed(2)}%
+`;

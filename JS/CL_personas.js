@@ -1,7 +1,7 @@
 export default class CL_personas {
-constructor (n, e){
-    this.nombre = n;
-    this.edad = +e;
+constructor(n, e){
+    this.nombre= n;
+    this.edad= +e;
 }
 
 
